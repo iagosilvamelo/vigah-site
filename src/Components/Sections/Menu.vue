@@ -1,9 +1,9 @@
 <template>
-  <header class="fixed top-0 left-0 w-full bg-dark text-white z-50 shadow-md transition-all duration-300">
+  <header class="fixed top-0 left-0 w-full bg-dark text-white z-50 transition-all duration-300">
     <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <img
         v-if="showLogoInNav"
-        src="../assets/logo.png"
+        src="@/assets/logo.png"
         alt="Vigah Logo"
         class="w-28 transition-opacity duration-300 opacity-100"
       />

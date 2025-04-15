@@ -6,36 +6,36 @@
   
         <div class="flex justify-center gap-6">
           <a
-            href="https://www.instagram.com/vigah.digital"
+            :href="social.instagram"
             target="_blank"
             aria-label="Instagram"
             class="hover:scale-110 transition-transform duration-300"
           >
-            <img src="/icons/instagram.svg" alt="Instagram" class="w-5 h-5" />
+            <img src="@/assets/icons/instagram.svg" alt="Instagram" class="w-5 h-5" />
           </a>
           <a
-            href="https://www.facebook.com/profile.php?id=61574895397856"
+            :href="social.facebook"
             target="_blank"
             aria-label="Facebook"
             class="hover:scale-110 transition-transform duration-300"
           >
-            <img src="/icons/facebook.svg" alt="Facebook" class="w-5 h-5" />
+            <img src="@/assets/icons/facebook.svg" alt="Facebook" class="w-5 h-5" />
           </a>
           <a
-            href="https://www.linkedin.com/company/106987657"
+            :href="social.linkedin"
             target="_blank"
             aria-label="LinkedIn"
             class="hover:scale-110 transition-transform duration-300"
           >
-            <img src="/icons/linkedin.svg" alt="LinkedIn" class="w-5 h-5" />
+            <img src="@/assets/icons/linkedin.svg" alt="LinkedIn" class="w-5 h-5" />
           </a>
           <a
-            href="https://bit.ly/Vigah"
+            :href="social.whatsapp"
             target="_blank"
             aria-label="WhatsApp"
             class="hover:scale-110 transition-transform duration-300"
           >
-            <img src="/icons/whatsapp.svg" alt="WhatsApp" class="w-5 h-5" />
+            <img src="@/assets/icons/whatsapp.svg" alt="WhatsApp" class="w-5 h-5" />
           </a>
         </div>
       </div>
@@ -43,9 +43,7 @@
   </template>
   
   <script setup>
-  // Nenhum script necessário neste componente por enquanto
+  import { inject } from 'vue'
+  const social = inject('social')
   </script>
   
-  <style scoped>
-  /* Se quiser personalizar os ícones com filtro ou outra abordagem */
-  </style>

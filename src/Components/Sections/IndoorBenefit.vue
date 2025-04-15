@@ -45,5 +45,5 @@
   </template>
   
   <script setup>
-  import BenefitCard from './BenefitCard.vue'
+  import BenefitCard from '@/Components/BenefitCard.vue'
   </script>

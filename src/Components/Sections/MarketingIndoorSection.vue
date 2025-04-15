@@ -11,7 +11,7 @@
         <p class="text-lg mb-6">
             Apresente seu produto com criatividade e impacto através de vídeos dinâmicos e chamativos. Seja lembrado por quem realmente importa!
         </p>
-        <a href="https://bit.ly/Vigah" 
+        <a :href="social.whatsapp" 
             target="_blank" 
             class="inline-block mt-4 bg-primary text-black font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-yellow-400 transition"
         >
@@ -22,7 +22,7 @@
         <!-- Vídeo -->
         <div class="rounded-2xl overflow-hidden shadow-2xl">
         <video autoplay muted loop playsinline class="w-full h-auto rounded-xl">
-            <source src="/videos/anuncie-aqui.mp4" type="video/mp4" />
+            <source src="@/assets/videos/anuncie-aqui.mp4" type="video/mp4" />
             Seu navegador não suporta a reprodução de vídeo.
         </video>
         </div>
@@ -30,3 +30,8 @@
     </div>
     </section>
 </template>
+
+<script setup>
+import { inject } from 'vue'
+const social = inject('social')
+</script>
