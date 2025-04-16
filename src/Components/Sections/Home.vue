@@ -6,6 +6,13 @@
       <a :href="social.whatsapp" target="_blank" class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-full hover:bg-secondary transition">
         Fale com a Vigah
       </a>
+
+      <a href="#descricao" @click.prevent="$scrollTo('descricao')" class="absolute bottom-8 animate-bounce">
+      <svg class="w-8 h-8 text-white hover:text-primary transition" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </a>
     </section>
 </template>
 

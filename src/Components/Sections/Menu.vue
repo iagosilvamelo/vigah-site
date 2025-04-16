@@ -10,44 +10,12 @@
       <div v-else class="w-28"></div>
 
       <ul class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
-      <li><a href="#home" @click.prevent="scrollTo('home')" class="hover:text-accent transition">Início</a></li>
-      <li><a href="#descricao" @click.prevent="scrollTo('descricao')" class="hover:text-accent transition">Sobre</a></li>
-      <li><a href="#indoor" @click.prevent="scrollTo('indoor')" class="hover:text-accent transition">Marketing Indoor</a></li>
-      <li><a href="#beneficios" @click.prevent="scrollTo('beneficios')" class="hover:text-accent transition">Benefícios</a></li>
-      <li><a href="#social" @click.prevent="scrollTo('social')" class="hover:text-accent transition">Social</a></li>
+      <li><a href="#home" @click.prevent="$scrollTo('home')" class="hover:text-accent transition">Início</a></li>
+      <li><a href="#descricao" @click.prevent="$scrollTo('descricao')" class="hover:text-accent transition">Sobre</a></li>
+      <li><a href="#indoor" @click.prevent="$scrollTo('indoor')" class="hover:text-accent transition">Marketing Indoor</a></li>
+      <li><a href="#beneficios" @click.prevent="$scrollTo('beneficios')" class="hover:text-accent transition">Benefícios</a></li>
+      <li><a href="#social" @click.prevent="$scrollTo('social')" class="hover:text-accent transition">Social</a></li>
       </ul>
     </nav>
   </header>
 </template>
-
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const showLogoInNav = ref(false)
-
-const handleScroll = () => {
-  const scrollY = window.scrollY
-  showLogoInNav.value = scrollY > window.innerHeight * 0.7
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
-
-const scrollTo = (id) => {
-  const element = document.getElementById(id)
-  const offset = 100 
-
-  if (element) {
-    const top = element.getBoundingClientRect().top + window.scrollY - offset
-    window.scrollTo({
-      top,
-      behavior: 'smooth'
-    })
-  }
-}
-</script>

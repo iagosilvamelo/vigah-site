@@ -11,4 +11,7 @@ app.provide('social', {
     linkedin: 'https://www.linkedin.com/company/106987657',
 })
 
+import scrollToPlugin from './plugins/scrollTo'
+app.use(scrollToPlugin, { offset: 100 })
+
 app.mount('#app')
