@@ -10,11 +10,21 @@
       <div v-else class="w-28"></div>
 
       <ul class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
-      <li><a href="#home" @click.prevent="$scrollTo('home')" class="hover:text-accent transition">Início</a></li>
-      <li><a href="#descricao" @click.prevent="$scrollTo('descricao')" class="hover:text-accent transition">Sobre</a></li>
-      <li><a href="#indoor" @click.prevent="$scrollTo('indoor')" class="hover:text-accent transition">Marketing Indoor</a></li>
-      <li><a href="#beneficios" @click.prevent="$scrollTo('beneficios')" class="hover:text-accent transition">Benefícios</a></li>
-      <li><a href="#social" @click.prevent="$scrollTo('social')" class="hover:text-accent transition">Social</a></li>
+      <li data-aos="fade-left">
+        <a href="#home" @click.prevent="$scrollTo('home')" class="hover:text-accent transition">Início</a>
+      </li>
+      <li data-aos="fade-left" data-aos-delay="100">
+        <a href="#descricao" @click.prevent="$scrollTo('descricao')" class="hover:text-accent transition">Sobre</a>
+      </li>
+      <li data-aos="fade-left" data-aos-delay="200">
+        <a href="#indoor" @click.prevent="$scrollTo('indoor')" class="hover:text-accent transition">Marketing Indoor</a>
+      </li>
+      <li data-aos="fade-left" data-aos-delay="300">
+        <a href="#beneficios" @click.prevent="$scrollTo('beneficios')" class="hover:text-accent transition">Benefícios</a>
+      </li>
+      <li data-aos="fade-left" data-aos-delay="400">
+        <a href="#social" @click.prevent="$scrollTo('social')" class="hover:text-accent transition">Social</a>
+      </li>
       </ul>
     </nav>
   </header>
